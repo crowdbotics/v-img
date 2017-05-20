@@ -1,0 +1,68 @@
+# v-img
+[![npm version](https://badge.fury.io/js/v-img.svg)](https://badge.fury.io/js/v-img)
+
+> Image viewer never been that easy to setup. :foggy:
+
+![demo gif](https://media.giphy.com/media/xUPGcK6vveKz3VpHtC/giphy.gif)
+
+[More examples](https://crowdbotics.github.io/v-img/demo/index.html)
+
+## Browser support
+| Browser | Minimum version |
+|:--:|:--:|
+| Firefox (desktop) | :question: |
+| Chrome (desktop) | :question: |
+| Safari (desktop) | :question: |
+| Opera (desktop) | :question: |
+| Firefox (mobile) | :question: |
+| Chrome (mobile) | :question: |
+| Safari (mobile) | :question: |
+| Opera mini (mobile) | :question: |
+> Will be filled soon.
+
+## Getting started
+1. Install plugin with yarn or npm
+```bash
+yarn add v-img
+```
+or
+```bash
+npm install v-img --save
+```
+2. Use plugin before creating Vue instance
+```javascript
+import Vue from 'vue';
+import VueImg from 'v-img';
+
+Vue.use(VueImg);
+new Vue({...})
+```
+3. Add `v-img` directive to the image
+```vue
+<img v-img src="...">
+```
+
+## Available options
+To open only one image don't specify any directive argument:
+```vue
+<img v-img src="...">
+```
+To specify groups of images (to be able to scroll around them when opened, show counter in top left corner) add similar argument to directives:
+```vue
+<img v-img:name src="...">
+<img v-img:name src="...">
+```
+There are some available options we can specify as value of the directive:
+```vue
+<img v-img="{...}" src="...">
+```
+| Option | Description | Default value |
+| :----: | :---------: | :-----------: |
+| src    | Source of image will be displayed | src attribute from html tag|
+| cursor| Cursor when hovering original `<img>` | 'pointer' |
+
+## TODO :pencil:
+
+- [ ] Preload all custom soruces of opened group
+- [ ] Always show control bottons on mobiles
+- [ ] Add tests
