@@ -3,7 +3,7 @@
 
 > Image viewer never been that easy to setup. :foggy:
 
-![demo gif](https://media.giphy.com/media/xUPGcK6vveKz3VpHtC/giphy.gif)
+![demo gif](https://media.giphy.com/media/xUA7b26WKJvTa04lby/giphy.gif)
 
 [More examples](https://crowdbotics.github.io/v-img/demo/index.html)
 
