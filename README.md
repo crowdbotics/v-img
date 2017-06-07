@@ -8,6 +8,7 @@
 [More examples](https://crowdbotics.github.io/v-img/demo/index.html)
 
 ## Browser support
+
 | Browser | Minimum version |
 |:--:|:--:|
 | Firefox (desktop) | :question: |
@@ -19,6 +20,10 @@
 | Safari (mobile) | :question: |
 | Opera mini (mobile) | :question: |
 > Will be filled soon.
+
+Browser support is one of the most important things of any javascript tool. Improving browser support with [BrowserStack](https://www.browserstack.com/) is the most convenient way to do it. Thanks them for support of this particular project and open source at all.
+
+![Browser Stack logo](https://www.browserstack.com/images/mail/browserstack-logo-footer.png)
 
 ## Getting started
 1. Install plugin with yarn or npm
