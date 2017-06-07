@@ -21,7 +21,7 @@
 | Opera mini (mobile) | :question: |
 > Will be filled soon.
 
-Browser support is one of the most important things of any javascript tool. Improving browser support with [BrowserStack](https://www.browserstack.com/) is the most convenient way to do it. Thanks them for support of this particular project and open source at all.
+Browser support is one of the most important things of any javascript tool. Improving browser support with [BrowserStack](https://www.browserstack.com/) is the most convenient way to do it. Thanks them for supporting this particular project and open source at all.
 
 ![Browser Stack logo](https://www.browserstack.com/images/mail/browserstack-logo-footer.png)
 
