@@ -11,15 +11,13 @@
 
 | Browser | Minimum version |
 |:--:|:--:|
-| Firefox (desktop) | :question: |
-| Chrome (desktop) | :question: |
-| Safari (desktop) | :question: |
-| Opera (desktop) | :question: |
-| Firefox (mobile) | :question: |
-| Chrome (mobile) | :question: |
-| Safari (mobile) | :question: |
-| Opera mini (mobile) | :question: |
-> Will be filled soon.
+| Firefox (desktop) | 32 |
+| Chrome (desktop) | 44 |
+| Safari (desktop) | 9.1 |
+| Opera (desktop) | 32 |
+| Firefox (mobile) | :white_check_mark: |
+| Chrome (mobile) | :white_check_mark: |
+| Safari (mobile) | :white_check_mark: |
 
 Browser support is one of the most important things of any javascript tool. Improving browser support with [BrowserStack](https://www.browserstack.com/) is the most convenient way to do it. Thanks them for supporting this particular project and open source at all.
 
