@@ -9,7 +9,7 @@
   "scripts": {
     "prebuild": "eslint lib test",
     "build": "rollup -c",
-    "watch": "rollup -c -w",
+    "watch": "rollup -c -w"
   },
   "repository": "https://github.com/crowdbotics/v-img",
   "keywords": [
