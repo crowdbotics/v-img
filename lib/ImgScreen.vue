@@ -117,8 +117,10 @@
 </style>
 
 <style scoped>
+
   * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 
   .fullscreen-v-img {
@@ -129,7 +131,8 @@
     left: 0;
     overflow: hidden;
     background-color: rgba(0, 0, 0, .7);
-    touch-action: none;
+    -ms-touch-action: none;
+        touch-action: none;
   }
 
   .content-v-img img {
@@ -143,7 +146,10 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
 
   .header-v-img {
@@ -170,6 +176,7 @@
     font-size: 30px;
     line-height: 50px;
     cursor: pointer;
+    -webkit-transition: color .4s ease-in-out;
     transition: color .4s ease-in-out;
   }
 
@@ -196,6 +203,7 @@
     background-color: rgba(0, 0, 0, .3);
     z-index: 1000;
     opacity: .3;
+    -webkit-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
     cursor: pointer;
   }
@@ -220,6 +228,7 @@
 
   .v-img-fade-enter-active,
   .v-img-fade-leave-active {
+    -webkit-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
   }
 </style>

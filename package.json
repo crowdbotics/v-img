@@ -10,9 +10,6 @@
     "prebuild": "eslint lib test",
     "build": "rollup -c",
     "watch": "rollup -c -w",
-    "pretest": "npm run build",
-    "test": "mocha",
-    "prepublish": "npm test"
   },
   "repository": "https://github.com/crowdbotics/v-img",
   "keywords": [
