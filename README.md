@@ -1,7 +1,7 @@
 # v-img
 [![npm version](https://badge.fury.io/js/v-img.svg)](https://badge.fury.io/js/v-img)
 
-> Image gallery never been that easy to setup. :foggy:
+> Image gallery has never been that easy to setup. :foggy:
 
 ![demo gif](https://media.giphy.com/media/xUA7b26WKJvTa04lby/giphy.gif)
 
