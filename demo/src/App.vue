@@ -12,26 +12,10 @@
           </code></pre>
         </div>
       </div>
+
       <div class="row">
         <div class="col-md-12">
-          <h1>Group of images</h1>
-          <div class="well gal">
-            <img v-img:group-1 src="https://unsplash.it/800/1200?image=1063">
-            <img v-img:group-1 src="https://unsplash.it/800/1200?image=1064">
-            <img v-img:group-1 src="https://unsplash.it/800/1200?image=1065">
-            <img v-img:group-1 src="https://unsplash.it/800/1200?image=1067">
-          </div>
-          <pre><code class="html">
-    &lt;img v-img:group src="https://unsplash.it/800/1200?image=1063"&gt;
-    &lt;img v-img:group src="https://unsplash.it/800/1200?image=1064"&gt;
-    &lt;img v-img:group src="https://unsplash.it/800/1200?image=1065"&gt;
-    &lt;img v-img:group src="https://unsplash.it/800/1200?image=1067"&gt;
-          </code></pre>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <h1>Different groups of images</h1>
+          <h1>Grouping images</h1>
           <div class="row">
             <div class="col-md-6">
               <h2>Group 1</h2>
@@ -57,6 +41,57 @@
           </code></pre>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Dynamically grouping images</h1>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="well gal">
+                <img v-for="image in dynamicGroup"
+                  :key="image.imageNumber"
+                  :dd="image.group"
+                  v-img="{ group: image.group }"
+                  :src="`https://unsplash.it/800/1200?image=${image.imageNumber}`">
+              </div>
+            </div>
+          </div>
+          <pre><code class="html">
+    &lt;img v-for="image in dynamicGroup"
+      :key="image.imageNumber"
+      v-img="{ group: image.group }"
+      :src="`https://unsplash.it/800/1200?image=${image.imageNumber}`"&gt;
+
+    &lt;script&gt;
+    export default {
+      data() {
+        return {
+          dynamicGroup: [
+            {
+              group: 'alpha',
+              imageNumber: '1080'
+            },
+            {
+              group: 'alpha',
+              imageNumber: '1081'
+            },
+            {
+              group: 'gamma',
+              imageNumber: '1082'
+            },
+            {
+              group: 'gamma',
+              imageNumber: '1083'
+            },
+          ],
+        };
+      },
+    };
+    &lt;/script&gt;
+          </code></pre>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-md-12">
           <h1>Custom properties</h1>
@@ -73,6 +108,34 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      dynamicGroup: [
+        {
+          group: 'alpha',
+          imageNumber: '1080'
+        },
+        {
+          group: 'alpha',
+          imageNumber: '1081'
+        },
+        {
+          group: 'gamma',
+          imageNumber: '1082'
+        },
+        {
+          group: 'gamma',
+          imageNumber: '1083'
+        },
+      ],
+    };
+  },
+};
+</script>
+
 
 <style>
   pre {
