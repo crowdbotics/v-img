@@ -1,6 +1,6 @@
 {
   "name": "v-img",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Vuejs plugin for image viewing",
   "main": "dist/v-img.js",
   "module": "dist/v-img.js",
@@ -34,7 +34,7 @@
     "babelrc-rollup": "^3.0.0",
     "eslint": "^3.12.2",
     "istanbul": "^0.4.5",
-    "mocha": "^3.2.0",
+    "mocha": "^3.4.2",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-istanbul": "^1.1.0",
