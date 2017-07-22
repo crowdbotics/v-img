@@ -61,6 +61,7 @@ There are some available options we can specify as value of the directive:
 ```
 | Option | Description | Default value |
 | :----: | :---------: | :-----------: |
+| group| the same as directive argument, but could be set dynamically | directive argument or null |
 | src    | Source of image will be displayed | src attribute from html tag|
 | cursor| Cursor when hovering original `<img>` | 'pointer' |
 
