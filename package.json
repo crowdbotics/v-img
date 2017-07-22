@@ -1,6 +1,6 @@
 {
   "name": "v-img",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Vuejs plugin for image viewing",
   "main": "dist/v-img.js",
   "module": "dist/v-img.js",
