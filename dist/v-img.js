@@ -28,3 +28,9 @@ __cov_WuSw60ZQZcI1aW7neh6dWA.s['1']++;var install=function install(Vue){__cov_Wu
 
 export default install;
 //# sourceMappingURL=v-img.js.map
+7neh6dWA.b['12'][1]++,e.src);}));__cov_WuSw60ZQZcI1aW7neh6dWA.s['30']++;Vue.set(vm,'currentImageIndex',images.indexOf(el));}__cov_WuSw60ZQZcI1aW7neh6dWA.s['31']++;Vue.set(vm,'closed',false);});}});};
+
+return install;
+
+})));
+//# sourceMappingURL=v-img.js.map
