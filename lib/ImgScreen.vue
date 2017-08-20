@@ -14,6 +14,9 @@
           class="count-v-img">
           {{ currentImageIndex + 1 }}/{{ images.length }}
         </span>
+        <span class="title-v-img">
+          {{ titles[currentImageIndex] }}
+        </span>
         <span
           class="close-v-img"
           @click="close">
@@ -51,6 +54,7 @@
     data() {
       return {
         images: [],
+	titles: [],
         visibleUI: true,
         currentImageIndex: 0,
         closed: true,
@@ -155,6 +159,14 @@
     background-color: rgba(0, 0, 0, .3);
     height: 50px;
     z-index: 9999;
+    display: flex;
+  }
+
+  .title-v-img {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: white;
+    flex: 1;
   }
 
   .count-v-img {
