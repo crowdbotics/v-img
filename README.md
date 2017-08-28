@@ -37,9 +37,14 @@ npm install v-img --save
 import Vue from 'vue';
 import VueImg from 'v-img';
 
-Vue.use(VueImg);
-new Vue({...})
+Vue.use(VueImg, {
+  altAsTitle: false,
+});
+
+new Vue({...});
 ```
+You can see default values of the plugin configuration above. If you don't need to change them - don't specify second argument at all.
+
 3. Add `v-img` directive to the image
 ```vue
 <img v-img src="...">
@@ -62,8 +67,9 @@ There are some available options we can specify as value of the directive:
 | Option | Description | Default value |
 | :----: | :---------: | :-----------: |
 | group| the same as directive argument, but could be set dynamically | directive argument or null |
-| src    | Source of image will be displayed | src attribute from html tag|
-| cursor| Cursor when hovering original `<img>` | 'pointer' |
+| src    | Source of image will be displayed | src attribute from html tag |
+| title  | Caption that will be displayed | none or value of the `alt` attribute, if `altAsTitle` is true |
+| cursor | Cursor when hovering original `<img>` | 'pointer' |
 
 ## TODO :pencil:
 
