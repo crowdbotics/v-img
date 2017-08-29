@@ -182,25 +182,32 @@ export default {
   font-size: 18px;
   font-weight: 400;
   color: white;
+  text-align: center;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.count-v-img,
+.close-v-img {
+  width: 80px;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  line-height: 50px;
 }
 
 .count-v-img {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-size: 15px;
   color: white;
   margin-left: 10px;
-  line-height: 50px;
 }
 
 .close-v-img {
   margin-right: 10px;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   color: #E5E6EB;
   font-size: 30px;
-  line-height: 50px;
   cursor: pointer;
   -webkit-transition: color .4s ease-in-out;
   transition: color .4s ease-in-out;
+  text-align: right;
 }
 
 .close-v-img:hover {
