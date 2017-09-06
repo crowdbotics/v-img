@@ -27,18 +27,18 @@
   "homepage": "https://github.com/crowdbotics/v-img",
   "dependencies": {},
   "devDependencies": {
-    "babel-eslint": "^7.1.1",
-    "babel-plugin-external-helpers": "^6.18.0",
-    "babel-preset-es2015": "^6.18.0",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.26.0",
     "babelrc-rollup": "^3.0.0",
-    "eslint": "^3.12.2",
+    "eslint": "^4.6.1",
     "istanbul": "^0.4.5",
     "mocha": "^3.5.0",
-    "rollup": "^0.41.6",
-    "rollup-plugin-babel": "^2.7.1",
+    "rollup": "^0.49.2",
+    "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-istanbul": "^1.1.0",
     "rollup-plugin-vue": "^2.4.1",
-    "rollup-watch": "^3.2.2"
+    "rollup-watch": "^4.3.1"
   }
 }

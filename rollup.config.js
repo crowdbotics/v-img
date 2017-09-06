@@ -1,34 +1,34 @@
-import vue from 'rollup-plugin-vue';
-import babel from 'rollup-plugin-babel';
-import babelrc from 'babelrc-rollup';
-import istanbul from 'rollup-plugin-istanbul';
+import vue from 'rollup-plugin-vue'
+import babel from 'rollup-plugin-babel'
+import babelrc from 'babelrc-rollup'
+import istanbul from 'rollup-plugin-istanbul'
 
-let pkg = require('./package.json');
-let external = Object.keys(pkg.dependencies);
+const pkg = require('./package.json')
+const external = Object.keys(pkg.dependencies)
 
 export default {
-  entry: 'lib/index.js',
+  input: 'lib/index.js',
   plugins: [
     vue({
-      css: true,
+      css: true
     }),
     babel(babelrc()),
     istanbul({
-      exclude: ['test/**/*', 'node_modules/**/*'],
-    }),
+      exclude: ['test/**/*', 'node_modules/**/*']
+    })
   ],
-  external: external,
-  targets: [
+  external,
+  output: [
     {
-      dest: pkg.main,
+      file: pkg.main,
       format: 'umd',
-      moduleName: 'vue-img',
-      sourceMap: true,
+      name: 'vue-img',
+      sourcemap: true
     },
     {
-      dest: pkg.module,
+      file: pkg.module,
       format: 'es',
-      sourceMap: true,
-    },
-  ],
-};
+      sourcemap: true
+    }
+  ]
+}
