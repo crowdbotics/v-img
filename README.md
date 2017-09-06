@@ -74,5 +74,5 @@ There are some available options we can specify as value of the directive:
 ## TODO :pencil:
 
 - [ ] Preload all custom sources of opened group
-- [ ] Always show control bottons on mobiles
+- [ ] Always show control buttons on mobiles
 - [ ] Add tests
