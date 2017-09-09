@@ -1,4 +1,4 @@
-<p align="center"><a href="https://v-img.review" target="_blank"><img width="775"src="demo/src/assets/logo.png"></a></p>
+<p align="center"><a href="https://v-img.review" target="_blank"><img width="775"src="logo.png"></a></p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/v-img"><img src="https://img.shields.io/npm/v/v-img.svg" alt="Version"></a>
