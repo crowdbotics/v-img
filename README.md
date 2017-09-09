@@ -1,78 +1,75 @@
-# v-img
-[![npm version](https://badge.fury.io/js/v-img.svg)](https://badge.fury.io/js/v-img)
+<p align="center"><a href="https://v-img.review" target="_blank"><img width="775"src="demo/src/assets/logo.png"></a></p>
 
-> Image gallery has never been that easy to setup. :foggy:
+<p align="center">
+  <a href="https://www.npmjs.com/package/v-img"><img src="https://img.shields.io/npm/v/v-img.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/v-img"><img src="https://img.shields.io/npm/dm/v-img.svg" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/v-img"><img src="https://img.shields.io/npm/l/v-img.svg" alt="License"></a>
+</p>
 
-![demo gif](https://media.giphy.com/media/xUA7b26WKJvTa04lby/giphy.gif)
 
-[More examples](https://crowdbotics.github.io/v-img/demo/index.html)
+<p align="center">
+  <img src="https://media.giphy.com/media/xUA7b26WKJvTa04lby/giphy.gif" alt="Demonstration">
+</p>
 
-## Browser support
+v-img is a plugin for [Vue.js](https://vuejs.org/) that allows you to show images in full-screen gallery by adding only one directive to the `<img>` tag.
 
-| Browser | Minimum version |
-|:--:|:--:|
-| Firefox (desktop) | 32 |
-| Chrome (desktop) | 44 |
-| Safari (desktop) | 9.1 |
-| Opera (desktop) | 32 |
-| Firefox (mobile) | :white_check_mark: |
-| Chrome (mobile) | :white_check_mark: |
-| Safari (mobile) | :white_check_mark: |
+[Demonstration page](https://v-img.review)
 
-Browser support is one of the most important things of any javascript tool. Improving browser support with [BrowserStack](https://www.browserstack.com/) is the most convenient way to do it. Thanks them for supporting this particular project and open source at all.
+### Browser support
+| Firefox | Chrome | Safari | Opera | Firefox (mobile)   | Chrome (mobile)    | Safari (mobile)    |
+|:--:     |:--:    |:--:    |:--:   |:--:                |:--:                |:--:                |
+| 32      | 44     | 9.1    | 32    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
-![Browser Stack logo](https://www.browserstack.com/images/mail/browserstack-logo-footer.png)
+## Installation
 
-## Getting started
-1. Install plugin with yarn or npm
-```bash
-yarn add v-img
+#### npm
 ```
-or
-```bash
 npm install v-img --save
 ```
-2. Use plugin before creating Vue instance
+
+## Getting started
+In your script entry point:
+
 ```javascript
 import Vue from 'vue';
 import VueImg from 'v-img';
 
-Vue.use(VueImg, {
+Vue.use(VueImg);
+```
+
+### Optional configurations
+*in this snippet all settings has its default value. No need to specify them unless you want to change default behavior.
+```javascript
+const vueImgConfig = {
+  // Consider alt of image as its title in gallery?
   altAsTitle: false,
-});
-
-new Vue({...});
+}
+Vue.use(VueImg, vueImgConfig);
 ```
-You can see default values of the plugin configuration above. If you don't need to change them - don't specify second argument at all.
 
-3. Add `v-img` directive to the image
+## Usage
+
+Add `v-img` directive to the image.
 ```vue
 <img v-img src="...">
 ```
 
-## Available options
-To open only one image don't specify any directive argument:
-```vue
-<img v-img src="...">
-```
-To specify groups of images (to be able to scroll around them when opened, show counter in top left corner) add similar argument to directives:
+### Available options
+Add similar directive arguments to place images to one gallery. (`:name` from the example below could be anything you want)
 ```vue
 <img v-img:name src="...">
 <img v-img:name src="...">
 ```
-There are some available options we can specify as value of the directive:
+
+Options that could be specified in directive value
+
 ```vue
 <img v-img="{...}" src="...">
 ```
+
 | Option | Description | Default value |
 | :----: | :---------: | :-----------: |
-| group| the same as directive argument, but could be set dynamically | directive argument or null |
-| src    | Source of image will be displayed | src attribute from html tag |
-| title  | Caption that will be displayed | none or value of the `alt` attribute, if `altAsTitle` is true |
+| group  | The same as directive argument, but could be set dynamically | directive argument or null |
+| src    | Image source that will be displayed in gallery | src attribute value from html tag |
+| title  | Caption that will be displayed | empty string or value of the `alt` attribute, if `altAsTitle` is true |
 | cursor | Cursor when hovering original `<img>` | 'pointer' |
-
-## TODO :pencil:
-
-- [ ] Preload all custom sources of opened group
-- [ ] Always show control buttons on mobiles
-- [ ] Add tests
