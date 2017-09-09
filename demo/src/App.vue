@@ -44,10 +44,10 @@
               <div class="images">
                 <img v-img:my-group
                   src="./assets/i-2.jpg"
-                  alt="Single image">
+                  alt="Multiple images">
                 <img v-img:my-group
                   src="./assets/i-3.jpg"
-                  alt="Single image">
+                  alt="Multiple images">
               </div>
               <code-highlight>
 &lt;img v-img:my-group src="..."&gt;
