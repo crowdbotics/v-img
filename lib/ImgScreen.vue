@@ -72,6 +72,7 @@ export default {
       currentImageIndex: 0,
       closed: true,
       uiTimeout: null,
+      handlers: {}
     }
   },
   methods: {
@@ -80,6 +81,15 @@ export default {
       this.images = [];
       this.currentImageIndex = 0;
       this.closed = true;
+      // fire closed event
+      if (this.handlers.closed) {
+        this.handlers.closed();
+      }
+    },
+    fireChangeEvent() {
+      if (this.handlers.changed) {
+        this.handlers.changed(this.currentImageIndex);
+      }
     },
     next() {
       // if next index not exists in array of images, set index to first element
@@ -88,6 +98,7 @@ export default {
       } else {
         this.currentImageIndex = 0;
       };
+      this.fireChangeEvent();
     },
     prev() {
       // if prev index not exists in array of images, set index to last element
@@ -96,6 +107,7 @@ export default {
       } else {
         this.currentImageIndex = this.images.length - 1;
       };
+      this.fireChangeEvent();
     },
     showUI() {
       // UI's hidden, we reveal it for some time only on mouse move and
