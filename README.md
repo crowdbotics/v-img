@@ -69,7 +69,10 @@ Options that could be specified in directive value
 
 | Option | Description | Default value |
 | :----: | :---------: | :-----------: |
-| group  | The same as directive argument, but could be set dynamically | directive argument or null |
+| group  | The same as directive argument, but could be set dynamically | directive argument or undefined |
 | src    | Image source that will be displayed in gallery | src attribute value from html tag |
 | title  | Caption that will be displayed | empty string or value of the `alt` attribute, if `altAsTitle` is true |
+| opened | Function that will be executed on gallery open | undefined |
+| closed | Function that will be executed on gallery close | undefined |
+| changed(imageIndex) | Function that will be executed when switching between images in gallery | undefined |
 | cursor | Cursor when hovering original `<img>` | 'pointer' |
