@@ -76,3 +76,5 @@ Options that could be specified in directive value
 | closed | Function that will be executed on gallery close | undefined |
 | changed(imageIndex) | Function that will be executed when switching between images in gallery | undefined |
 | cursor | Cursor when hovering original `<img>` | 'pointer' |
+
+* Any of these options except `opened`, `closed`, `changed` functions could be changed at runtime.

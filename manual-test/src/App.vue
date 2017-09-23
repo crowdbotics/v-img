@@ -1,11 +1,10 @@
 <template>
   <div>
 
-    <img v-img:a
-      :alt="cSrc"
+    <img v-img:a="{ opened, changed, closed}"
       src="https://unsplash.it/200/300?image=2">
 
-    <img v-img:a
+    <img v-img:b
       :src="`https://unsplash.it/200/300?image=${cSrc}`">
 
     <button @click="cSrc++">Change src of first image</button>

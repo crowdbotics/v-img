@@ -104,7 +104,7 @@ export default {
       }
     },
     next() {
-      if (!this.closed) {
+      if (!this.closed && this.images.length > 1) {
         // if next index not exists in array of images, set index to first element
         if (this.currentImageIndex + 1 < this.images.length) {
           this.currentImageIndex++;
@@ -115,7 +115,7 @@ export default {
       }
     },
     prev() {
-      if (!this.closed) {
+      if (!this.closed && this.images.length > 1) {
         // if prev index not exists in array of images, set index to last element
         if (this.currentImageIndex > 0) {
           this.currentImageIndex--;
