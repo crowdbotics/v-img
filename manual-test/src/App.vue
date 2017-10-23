@@ -1,41 +1,12 @@
 <template>
   <div>
+    <img v-img:a="{ sourceButton: true }" src="https://unsplash.it/200/300?image=2">
 
-    <img v-img:a="{ opened, changed, closed}"
-      src="https://unsplash.it/200/300?image=2">
-
-    <img v-img:b
-      :src="`https://unsplash.it/200/300?image=${cSrc}`">
-
-    <button @click="cSrc++">Change src of first image</button>
-    <button @click="fire">clicmke</button>
+    <img v-img:a="{title: 'titlehere haha haha'}"
+      src="https://unsplash.it/200/300?image=1">
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      cSrc: 55,
-      o: this.opened
-    };
-  },
-  methods: {
-    fire() {
-      this.o = this.opened2
-    },
-    opened() {
-      console.log('OPENED');
-    },
-    opened2() {
-      console.log('OPENED2');
-    },
-    closed() {
-      console.log('CLOSED');
-    },
-    changed(index) {
-      console.log('CHANGED', index);
-    },
-  }
-}
+export default {};
 </script>
