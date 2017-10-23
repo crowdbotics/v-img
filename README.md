@@ -41,8 +41,10 @@ Vue.use(VueImg);
 *in this snippet all settings has its default value. No need to specify them unless you want to change default behavior.
 ```javascript
 const vueImgConfig = {
-  // Consider alt of image as its title in gallery?
+  // Use `alt` attribute as gallery slide title
   altAsTitle: false,
+  // Display 'download' button near 'close' that opens source image in new tab
+  sourceButton: false,
 }
 Vue.use(VueImg, vueImgConfig);
 ```
@@ -67,14 +69,15 @@ Options that could be specified in directive value
 <img v-img="{...}" src="...">
 ```
 
-| Option | Description | Default value |
-| :----: | :---------: | :-----------: |
-| group  | The same as directive argument, but could be set dynamically | directive argument or undefined |
-| src    | Image source that will be displayed in gallery | src attribute value from html tag |
-| title  | Caption that will be displayed | empty string or value of the `alt` attribute, if `altAsTitle` is true |
-| opened | Function that will be executed on gallery open | undefined |
-| closed | Function that will be executed on gallery close | undefined |
-| changed(imageIndex) | Function that will be executed when switching between images in gallery | undefined |
-| cursor | Cursor when hovering original `<img>` | 'pointer' |
+| Option | Description | Default value | Data type |
+| :----: | :---------: | :-----------: | :-------: |
+| group  | The same as directive argument, but could be set dynamically | directive argument or undefined | string |
+| src    | Image source that will be displayed in gallery | src attribute value from html tag | string |
+| title  | Caption that will be displayed | empty string or value of the `alt` attribute, if `altAsTitle` is true | string |
+| sourceButton | Display 'download' button near 'close' that opens source image in new tab | `false` if `sourceButton` is not set to true when initializing plugin | boolean |
+| opened | Function that will be executed on gallery open | undefined | function |
+| closed | Function that will be executed on gallery close | undefined | function |
+| changed(imageIndex) | Function that will be executed when switching between images in gallery | undefined | function |
+| cursor | Cursor when hovering original `<img>` | 'pointer' | string |
 
 * Any of these options except `opened`, `closed`, `changed` functions could be changed at runtime.
