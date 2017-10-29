@@ -45,6 +45,8 @@ const vueImgConfig = {
   altAsTitle: false,
   // Display 'download' button near 'close' that opens source image in new tab
   sourceButton: false,
+  // Event listener to open gallery will be applied to <img> element
+  openOn: 'click',
 }
 Vue.use(VueImg, vueImgConfig);
 ```
@@ -74,10 +76,11 @@ Options that could be specified in directive value
 | group  | The same as directive argument, but could be set dynamically | directive argument or undefined | string |
 | src    | Image source that will be displayed in gallery | src attribute value from html tag | string |
 | title  | Caption that will be displayed | empty string or value of the `alt` attribute, if `altAsTitle` is true | string |
+| openOn | Event listener to open gallery will be applied to `<img>`. Available options are 'dblclick', 'mouseover' and all native JS events. | 'click' if another not stated when initializing plugin | string |
 | sourceButton | Display 'download' button near 'close' that opens source image in new tab | `false` if `sourceButton` is not set to true when initializing plugin | boolean |
 | opened | Function that will be executed on gallery open | undefined | function |
 | closed | Function that will be executed on gallery close | undefined | function |
 | changed(imageIndex) | Function that will be executed when switching between images in gallery | undefined | function |
 | cursor | Cursor when hovering original `<img>` | 'pointer' | string |
 
-* Any of these options except `opened`, `closed`, `changed` functions could be changed at runtime.
+* Any of these options except `opened`, `closed`, `changed` functions and `openOn` property could be changed at runtime.
