@@ -22,12 +22,11 @@ v-img is a plugin for [Vue.js](https://vuejs.org/) that allows you to show image
 
 ## Installation
 
-#### npm
+#### via npm
 ```
 npm install v-img --save
 ```
 
-## Getting started
 In your script entry point:
 
 ```javascript
@@ -37,8 +36,16 @@ import VueImg from 'v-img';
 Vue.use(VueImg);
 ```
 
+#### via CDN
+[![](https://data.jsdelivr.com/v1/package/npm/v-img/badge)](https://www.jsdelivr.com/package/npm/v-img)
+* make sure to change `latest` to the number of latest version of the plugin to avoid compatibility problems.
+```html
+<!-- After vuejs -->
+<script src="https://cdn.jsdelivr.net/npm/v-img@latest/dist/v-img.min.js"></script>
+```
+
 ### Optional configurations
-*in this snippet all settings has its default value. No need to specify them unless you want to change default behavior.
+*in this snippet all settings has its default value. No need to specify them unless you want to change default behavior. Unfortunately if you used CDN way to include plugin you can't set up these options, but still can set them up inline.
 ```javascript
 const vueImgConfig = {
   // Use `alt` attribute as gallery slide title
