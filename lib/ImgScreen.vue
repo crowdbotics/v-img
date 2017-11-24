@@ -52,14 +52,19 @@
       <!-- Constols end -->
 
       <div class="content-v-img">
-        <img :src="images[currentImageIndex]" @click="next">
+        <!-- <img :src="images[currentImageIndex]" @click="next"> -->
+        <pinch-image class="img" :src="images[currentImageIndex]"></pinch-image>
       </div>
     </div>
   </transition>
 </template>
 
 <script>
+import pinchImage from './PinchImage'
 export default {
+  components:{
+    pinchImage
+  },
   data() {
     return {
       images: [],
@@ -172,7 +177,7 @@ export default {
   touch-action: none;
 }
 
-.content-v-img img {
+.content-v-img .img {
   width: auto;
   height: auto;
   max-width: 100%;
