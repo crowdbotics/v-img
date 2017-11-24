@@ -7,7 +7,6 @@
   "jsnext:main": "dist/v-img.mjs",
   "author": "Crowdbotics team",
   "scripts": {
-    "prebuild": "eslint lib test",
     "build": "cross-env NODE_ENV=production rollup -c",
     "watch": "cross-env NODE_ENV=development rollup -c -w"
   },
