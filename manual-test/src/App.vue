@@ -2,9 +2,10 @@
   <div>
     <input type="number" v-model="n" id="">
     <img v-img src="https://unsplash.it/200/300?image=2">
-    <img v-img src="https://unsplash.it/200/300?image=324">
+    <img v-img:v src="https://unsplash.it/200/300?image=324">
     <img v-img="{ src: `https://unsplash.it/200/300?image=${n}` }" :diabled="n === 2">
     <img v-img:v src="https://unsplash.it/200/300?image=3">
+    <span v-img="{ group: 'v', src: 'https://unsplash.it/200/300?image=10' }">test</span>
   </div>
 </template>
 
