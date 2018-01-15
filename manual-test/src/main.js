@@ -5,6 +5,7 @@ import VueImg from '../../dist/v-img';
 Vue.use(VueImg, {
   altAsTitle: true,
   sourceButton: false,
+  thumbnails: true,
 });
 
 /* eslint-disable no-new */

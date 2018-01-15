@@ -34,6 +34,7 @@
           </span>
         </div>
       </div>
+
       <!-- Controls start -->
       <transition appear name="v-img-fade">
         <span v-if="visibleUI && images.length !== 1" class="prev-v-img" @click="prev">
@@ -50,12 +51,20 @@
         </span>
       </transition>
       <!-- Constols end -->
-      <div class="footer-v-img" v-if="previews.length > 1">
-        <div v-for="(preview, index) in previews" :key="index" :style="{backgroundImage: 'url('+preview+')'}" @click="select(index)" :class="{'is-selected': currentImageIndex == index}"></div> 
+
+      <div class="footer-v-img" v-if="thumbnails && images.length > 1">
+        <img
+          v-for="(thumbnail, index) in images"
+          :key="index"
+          :src="thumbnail"
+          @click="select(index)"
+          :class="{'is-selected': currentImageIndex == index}">
       </div>
+
       <div class="content-v-img">
         <img :src="images[currentImageIndex]" @click="next">
       </div>
+
     </div>
   </transition>
 </template>
@@ -65,14 +74,14 @@ export default {
   data() {
     return {
       images: [],
-      previews: [],
       titles: [],
       sourceButtons: [],
       visibleUI: true,
       currentImageIndex: 0,
       closed: true,
       uiTimeout: null,
-      handlers: {}
+      handlers: {},
+      thumbnails: false,
     };
   },
   watch: {
@@ -83,7 +92,7 @@ export default {
       if (!newVal && this.handlers.opened) {
         this.handlers.opened();
       }
-    }
+    },
   },
   methods: {
     // Not using currentImageIndex watcher because it will
@@ -97,7 +106,7 @@ export default {
     },
     close() {
       if (!this.closed) {
-        document.querySelector("body").classList.remove("body-fs-v-img");
+        document.querySelector('body').classList.remove('body-fs-v-img');
         this.images = [];
         this.currentImageIndex = 0;
         this.closed = true;
@@ -138,10 +147,10 @@ export default {
           this.visibleUI = false;
         }, 3500);
       }
-    }
+    },
   },
   created() {
-    window.addEventListener("keyup", e => {
+    window.addEventListener('keyup', e => {
       // esc key and 'q' for quit
       if (e.keyCode === 27 || e.keyCode === 81) this.close();
       // arrow right and 'l' key (vim-like binding)
@@ -149,13 +158,13 @@ export default {
       // arrow left and 'h' key (vim-like binding)
       if (e.keyCode === 37 || e.keyCode === 72) this.prev();
     });
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       this.close();
     });
-    window.addEventListener("mousemove", () => {
+    window.addEventListener('mousemove', () => {
       this.showUI();
     });
-  }
+  },
 };
 </script>
 
@@ -195,7 +204,8 @@ export default {
   user-select: none;
 }
 
-.header-v-img, .footer-v-img {
+.header-v-img,
+.footer-v-img {
   position: absolute;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
@@ -212,27 +222,34 @@ export default {
 .footer-v-img {
   bottom: 0;
   justify-content: center;
+  height: 70px;
+  /* scrolling thumbnails on mobile */
+  overflow-x: auto;
 }
 
-.footer-v-img div {
-  width: 42px;
-  height: 30px;
-  background-position: center;
-  background-size: cover;
+.footer-v-img img {
+  width: 60px;
+  height: 60px;
   cursor: pointer;
+  -webkit-transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  object-fit: cover;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.footer-v-img div.is-selected {
-  width: 56px;
-  height: 40px;
+.footer-v-img img.is-selected {
+  transform: scale(1.1);
 }
 
-.footer-v-img div:not(:last-child) {
-  margin-right: 5px;
+.footer-v-img img:not(:last-child) {
+  margin-right: 7px;
 }
 
 .title-v-img {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   color: white;
@@ -244,7 +261,7 @@ export default {
 .count-v-img,
 .buttons-v-img {
   width: 80px;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
 }
 
 .count-v-img {
@@ -305,7 +322,7 @@ export default {
   top: 50%;
   margin-top: -12.5px;
   font-size: 15px;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1000;

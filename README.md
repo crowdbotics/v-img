@@ -54,6 +54,8 @@ const vueImgConfig = {
   sourceButton: false,
   // Event listener to open gallery will be applied to <img> element
   openOn: 'click',
+  // Show thumbnails for all groups with more than 1 image
+  thumbnails: false,
 }
 Vue.use(VueImg, vueImgConfig);
 ```
@@ -85,6 +87,7 @@ Options that could be specified in directive value
 | title  | Caption that will be displayed | empty string or value of the `alt` attribute, if `altAsTitle` is true | string |
 | openOn | Event listener to open gallery will be applied to `<img>`. Available options are 'dblclick', 'mouseover' and all native JS events. | 'click' if another not stated when initializing plugin | string |
 | sourceButton | Display 'download' button near 'close' that opens source image in new tab | `false` if `sourceButton` is not set to true when initializing plugin | boolean |
+| thumbnails | When opening group by clicking (or other `openOn` event) on this image, thumbnails of images for this group will be visible | `false` if `thumbnails` is not set to true when initializing plugin | boolean |
 | opened | Function that will be executed on gallery open | undefined | function |
 | closed | Function that will be executed on gallery close | undefined | function |
 | changed(imageIndex) | Function that will be executed when switching between images in gallery | undefined | function |
