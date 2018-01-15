@@ -20,9 +20,10 @@ v-img is a plugin for [Vue.js](https://vuejs.org/) that allows you to show image
 |:--:     |:--:    |:--:    |:--:   |:--:                |:--:                |:--:                |
 | 32      | 44     | 9.1    | 32    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 <p align="right">
-  <div>big thanks to</div>
+  big thanks to
+  <br>
   <a href="https://www.browserstack.com/">
-    <img height="60" src="https://www.browserstack.com/images/layout/browserstack-logo-600x315.png" alt="Demonstration">
+    <img height="50" src="https://digitalscientists.com/system/images/1448/original/logo-browserstack.png" alt="Demonstration">
   </a>
 </p>
 
