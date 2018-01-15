@@ -19,6 +19,13 @@ v-img is a plugin for [Vue.js](https://vuejs.org/) that allows you to show image
 | Firefox | Chrome | Safari | Opera | Firefox (mobile)   | Chrome (mobile)    | Safari (mobile)    |
 |:--:     |:--:    |:--:    |:--:   |:--:                |:--:                |:--:                |
 | 32      | 44     | 9.1    | 32    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+<p align="right">
+  big thanks to
+  <a href="https://www.browserstack.com/">
+    <img style="vertical-align: middle; height: 50px;" src="https://www.browserstack.com/images/layout/browserstack-logo-600x315.png" alt="Demonstration">
+  </a>
+</p>
+
 
 ## Installation
 
