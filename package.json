@@ -16,7 +16,9 @@
     "vue",
     "images",
     "photoswipe",
-    "preview"
+    "preview",
+    "image gallery",
+    "vue image gallery"
   ],
   "license": "MIT",
   "bugs": {},
