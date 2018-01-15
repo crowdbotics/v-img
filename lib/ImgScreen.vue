@@ -50,7 +50,9 @@
         </span>
       </transition>
       <!-- Constols end -->
-
+      <div class="footer-v-img" v-if="previews.length > 1">
+        <div v-for="(preview, index) in previews" :key="index" :style="{backgroundImage: 'url('+preview+')'}" @click="select(index)" :class="{'is-selected': currentImageIndex == index}"></div> 
+      </div>
       <div class="content-v-img">
         <img :src="images[currentImageIndex]" @click="next">
       </div>
@@ -63,6 +65,7 @@ export default {
   data() {
     return {
       images: [],
+      previews: [],
       titles: [],
       sourceButtons: [],
       visibleUI: true,
@@ -110,6 +113,9 @@ export default {
         }
         this.fireChangeEvent();
       }
+    },
+    select(selectedImage) {
+      this.currentImageIndex = selectedImage;
     },
     prev() {
       if (!this.closed && this.images.length > 1) {
@@ -189,15 +195,40 @@ export default {
   user-select: none;
 }
 
-.header-v-img {
+.header-v-img, .footer-v-img {
   position: absolute;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   height: 50px;
   z-index: 9999;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+.header-v-img {
+  justify-content: space-between;
+}
+
+.footer-v-img {
+  bottom: 0;
+  justify-content: center;
+}
+
+.footer-v-img div {
+  width: 42px;
+  height: 30px;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.footer-v-img div.is-selected {
+  width: 56px;
+  height: 40px;
+}
+
+.footer-v-img div:not(:last-child) {
+  margin-right: 5px;
 }
 
 .title-v-img {
