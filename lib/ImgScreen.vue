@@ -5,7 +5,7 @@
     prettier settings since I'm using prettier-eslint
    -->
   <transition appear name="v-img-fade">
-    <div v-if="!closed" class="fullscreen-v-img" @click.self="close">
+    <div v-if="!closed" class="fullscreen-v-img" @click.self="close" @keyup.esc="close">
       <!--
         Count of total images in array and current position.
         We're showing wrapper element of this counter just to
@@ -29,7 +29,7 @@
               </svg>
             </a>
           </span>
-          <span @click="close">
+          <span @click="close" @keyup.esc="close">
             &times;
           </span>
         </div>

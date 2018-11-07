@@ -1,5 +1,5 @@
 {
-  "name": "v-img",
+  "name": "v-img-2",
   "version": "0.2.0",
   "description": "Vuejs plugin for image viewing",
   "main": "dist/v-img.js",
@@ -11,7 +11,7 @@
     "build": "cross-env NODE_ENV=production rollup -c",
     "watch": "cross-env NODE_ENV=development rollup -c -w"
   },
-  "repository": "https://github.com/crowdbotics/v-img",
+  "repository": "https://github.com/atsunechka/v-img",
   "keywords": [
     "vue",
     "images",
@@ -26,7 +26,7 @@
     "lib",
     "dist"
   ],
-  "homepage": "https://github.com/crowdbotics/v-img",
+  "homepage": "https://github.com/atsunechka/v-img",
   "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^7.2.3",
