@@ -82,10 +82,22 @@ export default {
       uiTimeout: null,
       handlers: {},
       thumbnails: false,
+      closeOnScroll: false,
     };
   },
   watch: {
     closed(newVal) {
+      // Disable scrolling when the gallery is visible and the
+      // closeOnScroll option is false.
+      if(!this.closeOnScroll) {
+        if (this.closed) {
+          document.documentElement.style.overflow = 'auto';
+        }
+        else {
+          document.documentElement.style.overflow = 'hidden';
+        }
+      }
+
       if (newVal && this.handlers.closed) {
         this.handlers.closed();
       }
@@ -159,7 +171,9 @@ export default {
       if (e.keyCode === 37 || e.keyCode === 72) this.prev();
     });
     window.addEventListener('scroll', () => {
-      this.close();
+      if (this.closeOnScroll) {
+        this.close();
+      }
     });
     window.addEventListener('mousemove', () => {
       this.showUI();
