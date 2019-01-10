@@ -6,6 +6,7 @@ Vue.use(VueImg, {
   altAsTitle: true,
   sourceButton: false,
   thumbnails: true,
+  closeOnScroll: false,
 });
 
 /* eslint-disable no-new */

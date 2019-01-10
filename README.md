@@ -100,5 +100,6 @@ Options that could be specified in directive value
 | closed | Function that will be executed on gallery close | undefined | function |
 | changed(imageIndex) | Function that will be executed when switching between images in gallery | undefined | function |
 | cursor | Cursor when hovering original `<img>` | 'pointer' | string |
+| closeOnScroll | Determines if the gallery should close upon scrolling. NOTE: If this option is set to false, the page will not scroll when the gallery is open. | true | boolean |
 
 * Any of these options except `opened`, `closed`, `changed` functions and `openOn` property could be changed at runtime.
